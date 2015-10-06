@@ -10,7 +10,7 @@ Ruby Maze generating gem.
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'maze_magic', github: 'equivalent/maze_magic'
+gem 'maze_magic'
 ```
 
 And then execute:
