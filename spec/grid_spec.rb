@@ -1,30 +1,5 @@
 require 'spec_helper'
 
-require 'forwardable'
-
-module MazeMagic
-  class Grid
-    extend Forwardable
-
-    attr_reader :height, :width, :start_x, :start_y
-
-    def_delegators :grid_map, :size, :each, :length, :[], :to_s, :to_a
-
-    def initialize(width:, height:, start_x: 0, start_y: 0)
-      @width  = width
-      @height = height
-      @start_x = start_x
-      @start_y = start_y
-    end
-
-    private
-
-    def grid_map
-      @grid_map ||= Array.new(height) { Array.new(width, 0) }
-    end
-  end
-end
-
 RSpec.describe MazeMagic::Grid do
   subject(:grid) { described_class.new(attributes) }
 
@@ -80,8 +55,33 @@ RSpec.describe MazeMagic::Grid do
       end
     end
   end
+
+  context 'generating grid of heigh 2 and width 3' do
+    let(:attributes) { {height: 2, width: 3, start_x: 1 , start_y: 1} }
+
+    describe "#height" do
+      it { expect(subject.height).to be 2 }
+    end
+
+    describe "#width" do
+      it { expect(subject.width).to be 3 }
+    end
+
+    describe '#start_y' do
+      it { expect(subject.start_y).to be 1 }
+    end
+
+    describe '#start_x' do
+      it { expect(subject.start_y).to be 1 }
+    end
+
+    describe '#to_a' do
+      it do
+        expect(subject.to_a).to match_array([
+          [0, 0, 0],
+          [0, 0, 0]
+        ])
+      end
+    end
+  end
 end
-
-
-
-
