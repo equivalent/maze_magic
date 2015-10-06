@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/equivalent/maze_magic.svg)](https://travis-ci.org/equivalent/maze_magic)
+
 # MazeMagic
 
 Ruby Maze generating gem.
