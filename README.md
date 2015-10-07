@@ -22,6 +22,7 @@ And then execute:
 #### Simple use:
 
 ```ruby
+require 'maze_magic'
 
 def generate_maze
   MazeMagic::Generate
