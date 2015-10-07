@@ -81,4 +81,19 @@ module MazeExamples
       ]
     ]
   end
+
+  def cells_grid_1by1
+    [
+      [
+        MazeMagic::Edge.instance,
+        MazeMagic::HorizontalWall.instance,
+        MazeMagic::Edge.instance
+      ],
+      [
+        MazeMagic::VerticalWall.instance,
+        MazeMagic::HorizontalWall.instance,
+        MazeMagic::VerticalWall.instance
+      ]
+    ]
+  end
 end

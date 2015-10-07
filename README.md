@@ -19,37 +19,33 @@ And then execute:
 
 ## Usage
 
+#### Simple use:
+
 ```ruby
-# init grid
-grid = MazeMagic::Grid.new(height: 5, width: 5)
 
+def generate_maze
+  MazeMagic::Generate
+    .new(height: 5, width: 5)
+    .tap { |g| g.generate_maze }
+    .maze
+end
 
-#  _________ 
-# |_|_|_|_|_|
-# |_|_|_|_|_|
-# |_|_|_|_|_|
-# |_|_|_|_|_|
-# |_|_|_|_|_|
-
-# apply maze algorithm instructions to grid
-MazeMagic::MazeGenerator::RecursiveBacktracking
-  .new(grid: grid)
-  .call
-
-# translate maze instructions to Cells:
+# maze is a 2 dimensional array of these singleton objects:
 #
-#   MazeMagic::Edge.instance              # ' '
-#   MazeMagic::HorizontalWall.instance    #  _
-#   MazeMagic::VerticalWall.instance      #  |
-#   MazeMagic::Passage.instance           # ' '
+#       MazeMagic::Edge.instance              # ' '
+#       MazeMagic::HorizontalWall.instance    #  _
+#       MazeMagic::VerticalWall.instance      #  |
+#       MazeMagic::Passage.instance           # ' '
 #
-cells_grid = MazeMagic::MazeGenerator::InstructionsGridToCellsGrid
-  .new(grid: grid)
-  .tap { |generator| generator.call }
-  .cells_grid
+# so something like:
+#
+#    [[Edge, HW, HW, HW, HW, Edge],[VW, P, P,VW,P,P,P, HW],...]
+#
+maze = generate_maze 
 
-# optional - render the cells viea console
-MazeMagic::Renderer::ConsoleRenderer.new(cells_grid: cells_grid).call
+
+# optional: render in console
+MazeMagic::Renderer::ConsoleRenderer.new(cells_grid: maze).call
 
 #  _________ 
 # |_  |  _  |
@@ -59,6 +55,11 @@ MazeMagic::Renderer::ConsoleRenderer.new(cells_grid: cells_grid).call
 # |___|_____|
 
 ```
+
+#### More Complex use:
+
+`MazeMagic::Generate` is just an Interface. For more complex usage check
+`lib/maze_magic/generate.rb`, ...or specs.
 
 ## Maze generating Algorithm
 
