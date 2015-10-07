@@ -13,7 +13,7 @@ module MazeMagic
 
       attr_reader :grid
 
-      def initialize(grid: grid)
+      def initialize(grid:)
         @grid = grid
       end
 
