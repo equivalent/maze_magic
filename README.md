@@ -75,6 +75,37 @@ MazeMagic::Renderer::ConsoleRenderer.new(cells_grid: maze).call
 `MazeMagic::Generate` is just an Interface. For more complex usage check
 `lib/maze_magic/generate.rb`, ...or specs.
 
+#### Usage in web-app
+
+You can check https://github.com/equivalent/a-maze-ing for example Rails
+application, but the point is that you will represent the "Maze Wall Representation
+Objects" as walls/passages. (e.g. `<div class="horizontal-wall"></div>`, ...;
+or `<img src="/public/horizontal-wall.png">`)
+
+stupid example:
+
+```ruby
+@maze = generate_maze(height: 5, width: 5)
+```
+
+```erb
+<div id="maze">
+  <% @maze.each_with_index do |row, index| %>
+    <div class="maze-row maze-row-<%= index %>">
+      <% row.each do |maze_rep| %>
+        <% if maze_rep.is_a? MazeMagic::HorizontalWall  %>
+           <img src="/public/horizontal-wall.png">
+        <% elsif maze_rep.is_a? MazeMagic::Passage %>
+           <img src="/public/passage.png">
+           # ...
+        <% end %>
+      <% end %>
+    </div>
+    <div class=clear-fix></div>
+  <% end %>
+</div>
+```
+
 ## Maze generating Algorithm
 
 At this point there is just altered version of [Recursive Backtracking
