@@ -15,6 +15,7 @@ module MazeMagic
           end
           printer.call("\n")
         end
+        nil
       end
 
       def printer
