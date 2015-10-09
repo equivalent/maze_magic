@@ -1,5 +1,6 @@
 [![Build Status](https://travis-ci.org/equivalent/maze_magic.svg)](https://travis-ci.org/equivalent/maze_magic)
 [![Code Climate](https://codeclimate.com/github/equivalent/maze_magic/badges/gpa.svg)](https://codeclimate.com/github/equivalent/maze_magic)
+[![Test Coverage](https://codeclimate.com/github/equivalent/maze_magic/badges/coverage.svg)](https://codeclimate.com/github/equivalent/maze_magic/coverage)
 
 # MazeMagic
 
