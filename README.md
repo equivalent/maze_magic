@@ -20,6 +20,9 @@ Ruby Maze generating gem.
 |_________|___|_________|_____________|_______|___|_____|_____|___|_________|_____|_________|___|_________|_____________|
 ```
 
+![](https://41.media.tumblr.com/59fd2a42d464f41af75887e2c2c7dcaf/tumblr_nvy4dupkKf1uicc6wo1_400.png)
+
+
 ## Installation
 
 Add this line to your application's Gemfile:
