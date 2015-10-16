@@ -1,3 +1,6 @@
+%w(north south east west).each do |file|
+  require_relative "recursive_backtracking/#{file}"
+end
 module MazeMagic
   module MazeGenerator
     ## RecursiveBacktracking algorithm for generating Maze
