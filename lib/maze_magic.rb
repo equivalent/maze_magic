@@ -14,7 +14,6 @@ end
 end
 
 require 'maze_magic/maze_generator/recursive_backtracking'
-require 'maze_magic/maze_generator/instructions_grid_to_cells_grid'
 
 require 'maze_magic/renderer/console_renderer'
 require 'maze_magic/generate'
