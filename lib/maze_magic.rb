@@ -6,7 +6,7 @@ require 'maze_magic/maze_generator'
 require 'maze_magic/maze_generator/randomnes'
 
 %w(horizontal_wall vertical_wall passage edge).each do |file|
-  require "maze_magic/#{file}"
+  require "maze_magic/maze/#{file}"
 end
 
 require 'maze_magic/maze_generator/recursive_backtracking'

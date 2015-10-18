@@ -74,19 +74,19 @@ module MazeMagic
       end
 
       def vw
-        MazeMagic::VerticalWall.instance
+        MazeMagic::Maze::VerticalWall.instance
       end
 
       def hw
-        MazeMagic::HorizontalWall.instance
+        MazeMagic::Maze::HorizontalWall.instance
       end
 
       def passage
-        MazeMagic::Passage.instance
+        MazeMagic::Maze::Passage.instance
       end
 
       def edge
-        MazeMagic::Edge.instance
+        MazeMagic::Maze::Edge.instance
       end
     end
   end
