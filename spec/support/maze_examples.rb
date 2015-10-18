@@ -1,5 +1,5 @@
 module MazeExamples
-  def cells_grid
+  def cells_grid_5by5
     [
       [
         MazeMagic::Maze::Edge.instance,

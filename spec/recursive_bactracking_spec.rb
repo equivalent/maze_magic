@@ -14,6 +14,6 @@ RSpec.describe MazeMagic::MazeGenerator::RecursiveBacktracking do
   end
 
   it 'should generate Cells Grid matching 5bf5_maze'  do
-    expect(maze).to match_array(cells_grid)
+    expect(maze).to match_array(cells_grid_5by5)
   end
 end

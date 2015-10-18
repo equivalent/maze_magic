@@ -3,7 +3,7 @@ require 'spec_helper'
 RSpec.describe MazeMagic::Renderer::ConsoleRenderer do
   include MazeExamples
 
-  subject { described_class.new(cells_grid: cells_grid) }
+  subject { described_class.new(cells_grid: cells_grid_5by5) }
 
   let(:expected_body) { File.read(MazeMagic::Tests.fixtures.join('5by5_dummy_maze.txt')) }
   let(:printed_body) { "" }
