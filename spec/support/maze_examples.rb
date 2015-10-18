@@ -1,98 +1,113 @@
 module MazeExamples
-  def cells_grid
+
+  # Cells representing maze 5by5:
+  #
+  #     _________ 
+  #    | |   |   |
+  #    | | | | | |
+  #    | | | | | |
+  #    | | | | | |
+  #    |___|___|_|
+  #
+  def cells_grid_5by5
     [
       [
-        MazeMagic::Edge.instance,
-        MazeMagic::HorizontalWall.instance,
-        MazeMagic::HorizontalWall.instance,
-        MazeMagic::HorizontalWall.instance,
-        MazeMagic::HorizontalWall.instance,
-        MazeMagic::HorizontalWall.instance,
-        MazeMagic::HorizontalWall.instance,
-        MazeMagic::HorizontalWall.instance,
-        MazeMagic::HorizontalWall.instance,
-        MazeMagic::HorizontalWall.instance,
-        MazeMagic::Edge.instance
+        MazeMagic::Maze::Edge.instance,
+        MazeMagic::Maze::HorizontalWall.instance,
+        MazeMagic::Maze::HorizontalWall.instance,
+        MazeMagic::Maze::HorizontalWall.instance,
+        MazeMagic::Maze::HorizontalWall.instance,
+        MazeMagic::Maze::HorizontalWall.instance,
+        MazeMagic::Maze::HorizontalWall.instance,
+        MazeMagic::Maze::HorizontalWall.instance,
+        MazeMagic::Maze::HorizontalWall.instance,
+        MazeMagic::Maze::HorizontalWall.instance,
+        MazeMagic::Maze::Edge.instance
       ],
       [
-        MazeMagic::VerticalWall.instance,
-        MazeMagic::Passage.instance,
-        MazeMagic::VerticalWall.instance,
-        MazeMagic::Passage.instance,
-        MazeMagic::Passage.instance,
-        MazeMagic::Passage.instance,
-        MazeMagic::VerticalWall.instance,
-        MazeMagic::Passage.instance,
-        MazeMagic::Passage.instance,
-        MazeMagic::Passage.instance,
-        MazeMagic::VerticalWall.instance,
+        MazeMagic::Maze::VerticalWall.instance,
+        MazeMagic::Maze::Passage.instance,
+        MazeMagic::Maze::VerticalWall.instance,
+        MazeMagic::Maze::Passage.instance,
+        MazeMagic::Maze::Passage.instance,
+        MazeMagic::Maze::Passage.instance,
+        MazeMagic::Maze::VerticalWall.instance,
+        MazeMagic::Maze::Passage.instance,
+        MazeMagic::Maze::Passage.instance,
+        MazeMagic::Maze::Passage.instance,
+        MazeMagic::Maze::VerticalWall.instance,
       ],
       [
-        MazeMagic::VerticalWall.instance,
-        MazeMagic::Passage.instance,
-        MazeMagic::VerticalWall.instance,
-        MazeMagic::Passage.instance,
-        MazeMagic::VerticalWall.instance,
-        MazeMagic::Passage.instance,
-        MazeMagic::VerticalWall.instance,
-        MazeMagic::Passage.instance,
-        MazeMagic::VerticalWall.instance,
-        MazeMagic::Passage.instance,
-        MazeMagic::VerticalWall.instance,
+        MazeMagic::Maze::VerticalWall.instance,
+        MazeMagic::Maze::Passage.instance,
+        MazeMagic::Maze::VerticalWall.instance,
+        MazeMagic::Maze::Passage.instance,
+        MazeMagic::Maze::VerticalWall.instance,
+        MazeMagic::Maze::Passage.instance,
+        MazeMagic::Maze::VerticalWall.instance,
+        MazeMagic::Maze::Passage.instance,
+        MazeMagic::Maze::VerticalWall.instance,
+        MazeMagic::Maze::Passage.instance,
+        MazeMagic::Maze::VerticalWall.instance,
       ],
       [
-        MazeMagic::VerticalWall.instance,
-        MazeMagic::Passage.instance,
-        MazeMagic::VerticalWall.instance,
-        MazeMagic::Passage.instance,
-        MazeMagic::VerticalWall.instance,
-        MazeMagic::Passage.instance,
-        MazeMagic::VerticalWall.instance,
-        MazeMagic::Passage.instance,
-        MazeMagic::VerticalWall.instance,
-        MazeMagic::Passage.instance,
-        MazeMagic::VerticalWall.instance
+        MazeMagic::Maze::VerticalWall.instance,
+        MazeMagic::Maze::Passage.instance,
+        MazeMagic::Maze::VerticalWall.instance,
+        MazeMagic::Maze::Passage.instance,
+        MazeMagic::Maze::VerticalWall.instance,
+        MazeMagic::Maze::Passage.instance,
+        MazeMagic::Maze::VerticalWall.instance,
+        MazeMagic::Maze::Passage.instance,
+        MazeMagic::Maze::VerticalWall.instance,
+        MazeMagic::Maze::Passage.instance,
+        MazeMagic::Maze::VerticalWall.instance
       ],
       [
-        MazeMagic::VerticalWall.instance,
-        MazeMagic::Passage.instance,
-        MazeMagic::VerticalWall.instance,
-        MazeMagic::Passage.instance,
-        MazeMagic::VerticalWall.instance,
-        MazeMagic::Passage.instance,
-        MazeMagic::VerticalWall.instance,
-        MazeMagic::Passage.instance,
-        MazeMagic::VerticalWall.instance,
-        MazeMagic::Passage.instance,
-        MazeMagic::VerticalWall.instance,
+        MazeMagic::Maze::VerticalWall.instance,
+        MazeMagic::Maze::Passage.instance,
+        MazeMagic::Maze::VerticalWall.instance,
+        MazeMagic::Maze::Passage.instance,
+        MazeMagic::Maze::VerticalWall.instance,
+        MazeMagic::Maze::Passage.instance,
+        MazeMagic::Maze::VerticalWall.instance,
+        MazeMagic::Maze::Passage.instance,
+        MazeMagic::Maze::VerticalWall.instance,
+        MazeMagic::Maze::Passage.instance,
+        MazeMagic::Maze::VerticalWall.instance,
       ],
       [
-        MazeMagic::VerticalWall.instance,
-        MazeMagic::HorizontalWall.instance,
-        MazeMagic::HorizontalWall.instance,
-        MazeMagic::HorizontalWall.instance,
-        MazeMagic::VerticalWall.instance,
-        MazeMagic::HorizontalWall.instance,
-        MazeMagic::HorizontalWall.instance,
-        MazeMagic::HorizontalWall.instance,
-        MazeMagic::VerticalWall.instance,
-        MazeMagic::HorizontalWall.instance,
-        MazeMagic::VerticalWall.instance,
+        MazeMagic::Maze::VerticalWall.instance,
+        MazeMagic::Maze::HorizontalWall.instance,
+        MazeMagic::Maze::HorizontalWall.instance,
+        MazeMagic::Maze::HorizontalWall.instance,
+        MazeMagic::Maze::VerticalWall.instance,
+        MazeMagic::Maze::HorizontalWall.instance,
+        MazeMagic::Maze::HorizontalWall.instance,
+        MazeMagic::Maze::HorizontalWall.instance,
+        MazeMagic::Maze::VerticalWall.instance,
+        MazeMagic::Maze::HorizontalWall.instance,
+        MazeMagic::Maze::VerticalWall.instance,
       ]
     ]
   end
 
+  # Cells representing maze 1by1:
+  #
+  #     _
+  #    |_|
+  #
   def cells_grid_1by1
     [
       [
-        MazeMagic::Edge.instance,
-        MazeMagic::HorizontalWall.instance,
-        MazeMagic::Edge.instance
+        MazeMagic::Maze::Edge.instance,
+        MazeMagic::Maze::HorizontalWall.instance,
+        MazeMagic::Maze::Edge.instance
       ],
       [
-        MazeMagic::VerticalWall.instance,
-        MazeMagic::HorizontalWall.instance,
-        MazeMagic::VerticalWall.instance
+        MazeMagic::Maze::VerticalWall.instance,
+        MazeMagic::Maze::HorizontalWall.instance,
+        MazeMagic::Maze::VerticalWall.instance
       ]
     ]
   end
